@@ -4,62 +4,105 @@
 
 <body>
 
- {{>navbar}}
+    {{>navbar}}
     <!-- main header -->
     <div class="container-fluid bk main_header">
         <div class="row">
             <div class="col-md-10 col-12 mx-auto">
-               <div class="main_content">
-                <form action="" class="temp_form">
-                    <input type="text" id="city_name" placeholder="Enter your city name">
-                    <input type="submit" value="Submit" id="submit_Btn">
-                </form>
-               </div>
-
-            <div class="temp_info">
-                <div class="top_layer">
-                    <p id="day">Tuesday</p>
-                    <p id="today_date">Stay Calm</p>
+                <div class="main_content">
+                    <form action="" class="temp_form">
+                        <input type="text" id="city_name" placeholder="Enter your city name">
+                        <input type="submit" value="Submit" id="submit_Btn">
+                    </form>
                 </div>
+                <div class="bar_box data_hide">
+                    <span id="future_Btn6">Current</span>
 
-                <div class="main_layer">
-                    <p id="city_name_given">
-                        Get The OutPut
-                    </p>
-                    <div class="middle_layer data_hide">
-                        <p ><span id="temp">0</span><sup>o</sup>C</p>
-                        <p id="temp_status"><i class=" fa fa-cloud" aria-hidden="true"></i></p>
+                    <span id="future_Btn1">Day 1</span>
+                    <span id="future_Btn2">Day 2</span>
+                    <span id="future_Btn3">Day 3</span>
+                    <span id="future_Btn4">Day 4</span>
+                    <span id="future_Btn5">Day 5</span>
+                </div>
+                <div class="w-con">
+
+                    <div class="temp_info">
+                        <div class="top_layer">
+                            <p id="day">Tuesday</p>
+                            <p id="today_date"> <span id="datex">12 </span> <span id="month"> 12 </span> <span id="year"> 2002 </span></p>
+                        </div>
+
+                        <div class="main_layer ">
+                            <p id="city_name_given">
+                                Get The OutPut
+                            </p>
+                            <div class="middle_layer data_hide">
+                                <p id="temp1"><span id="temp">0</span><sup>o</sup>C</p>
+                                <p id="temp_status"><i class=" fa fa-cloud" aria-hidden="true"></i></p>
+                            </div>
+                             <div class="all-other data_hide">
+                                <div class="inside-all">
+                            <p class="all-item-other">Gust</p>
+                            <p  class="all-item-other f-big"><span id="gust">000</span> m/s</p>
+                                </div>
+                                <div class="inside-all">
+                            <p class="all-item-other">Humidity</p>
+                            <p  class="all-item-other f-big"><span id="w-humidity"> </span>%</p>
+                                </div>
+                                <div class="inside-all">
+                            <p class="all-item-other">Wind Speed</p>
+                            <p class="all-item-other f-big"><span id="wind">000</span> m/s</p>
+                                </div>
+                                <div class="inside-all">
+                            <p class="all-item-other">Details</p>
+                            <p id="w-details" class="all-item-other f-big">4.45</p>
+
+                                </div>
+
+                        </div>
+                        </div>
+                       
                     </div>
+                    {{!-- <div class="w-box data_hide">
+                        <span id="gust" class="w-item">Gust</span>
+                        <span class="w-item">Gust</span>
+                        <span class="w-item">Gust</span>
+                        <span class="w-item">Gust</span>
+                        <span class="w-item">Gust</span>
+                        <span class="w-item">Gust</span>
+                    </div> --}}
                 </div>
-            </div>
 
             </div>
         </div>
     </div>
 
-{{>footer}}
+    {{>footer}}
 </body>
 <script src="js/main.js"></script>
 
 <script>
-    const getCurrentDay=()=>{
-        let weekday =new Array(7);
-        weekday[0]="Sunday";
-        weekday[1]="Monday";
-        weekday[2]="Tuesday";
-        weekday[3]="Wednesday";
-        weekday[4]="Thursday";
-        weekday[5]="Friday";
-        weekday[6]="Saturday";
+    const getCurrentDay = () => {
+        let weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
 
-        let currentTime =new Date();
-        let day =weekday[currentTime.getDay()];
-    let day1 =document.getElementById('day');
+        let currentTime = new Date();
+        let day = weekday[currentTime.getDay()];
+        let day1 = document.getElementById('day');
 
-        day1.innerText =day;
+        day1.innerText = day;
     };
 
     getCurrentDay();
+
     
+
 </script>
+
 </html>

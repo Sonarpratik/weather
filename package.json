@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/app.js"
-
+    "start": "node src/app.js"
   },
   "author": "Prateek",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
     "hbs": "^4.2.0",
+    "mongoose": "^6.6.5",
+    "mongose": "^0.0.2-security",
     "nodemon": "^2.0.19"
   }
 }

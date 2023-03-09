@@ -14,9 +14,7 @@ const connectRe = async () => {
         console.log("connect to mongodb!!!");
       } catch (err) {
         console.log("no connected");
-      } finally {
-        // mongo.connection.close()
-      }
+      } 
     });
   };
 
